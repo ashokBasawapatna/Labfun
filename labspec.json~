@@ -1,0 +1,77 @@
+{
+    "lab": {
+      "description": {
+            "id": "GT01",
+            "name": "Prisoner's Dilemma",
+            "discipline": ["Game Theory"],
+            "status": "",
+            "type": "",
+            "integration_level": 0,
+            "server-side": true,
+            "developer": [
+                {
+                    "contact": {
+                        "email": "ashok.basawapatna@colorado.edu",
+                        "alternate_email": "",
+                        "mobile_number": "",
+                        "office_number": ""
+                    },
+                    "department": "",
+                    "institute": "IIT Bombay",
+                    "name": "Basawapatna A.R.",
+                    "organization": "",
+                    "role": "workshop student",
+                    "title": "",
+                    "web": ""
+                }
+            ]
+        },
+        "build_requirements": {
+            "platform": {
+                "arch": "i386",
+                "build_steps": {
+                    "build": ["make -C ../src"],
+                    "configure": [],
+                    "post_build": [],
+                    "pre_build": [],
+                    "status": []
+                },
+                "installer": [],
+                "os": "ubuntu",
+                "osVersion": "12",
+                "service_pack": ""
+            }
+        },
+        "runtime_requirements": {
+            "platform": {
+                "arch": "x86_64",
+                "hosting": "dedicated",
+                "installer": ["sudo apt-get update","sudo apt-get install -y apache2","sudo apt-get install -y mysql memcache"],
+                "lab_actions": {
+                    "backup": [],
+                    "clean": [],
+                    "init": ["mv /var/www/index.html index.html.default","cp -r ../src/* /var/www/"],
+                    "pause": [],
+                    "publish": [],
+                    "restore": ["restore"],
+                    "resume": [],
+                    "shutdown": ["service apache2 stop"],
+                    "start": ["service apache2 start"],
+                    "stats": [],
+                    "stop": []
+                },
+                "memory": {
+                    "max_required": "",
+                    "min_required": ""
+                },
+                "os": "ubuntu",
+                "osVersion": "12",
+                "servicepack": "",
+                "storage": {
+                    "min_required": ""
+                }
+            }
+        }
+    },
+    "template": "1.0"
+}
